@@ -1,0 +1,29 @@
+{
+  "name": "Frontenders",
+  "version": "0.0.1",
+  "authors": [
+    "Frontenders"
+  ],
+  "description": "Photo Upload",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jQuery": "~2.1.4",
+    "remodal": "~1.0.2",
+    "bootstrap-growl": "~1.1.0",
+    "bootstrap": "^3.3.6",
+    "sass-mq": "latest",
+    "susy": "~2.2.6",
+    "bourbon": "~4.0.2",
+    "inuit.css": "~5.0.1",
+    "normalize.css": "~3.0.3",
+    "normalize-scss": "~3.0.3"
+  },
+  "devDependencies": {
+    "cropper": "^2.3.0"
+  }
+}

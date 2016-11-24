@@ -1,0 +1,12 @@
+// Responsive breakpoints
+$mq-breakpoints: (
+    mobile:          320px,
+    mobileIphon6:    360px,
+    mobileLandscape: 480px,
+    phablet:         580px,
+    lap:             768px,
+    tablet:          916px,
+    desktop:         1025px,
+    smallDesktop:    1200px,
+    wide:            1300px
+);
