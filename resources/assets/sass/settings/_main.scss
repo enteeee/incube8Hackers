@@ -1,0 +1,77 @@
+
+body {
+  background: #f2f2f2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.title-font {
+  text-align: center;
+  font-size: 50px;
+  color: #292e34;
+  font-family: monospace;
+  padding: 20px;
+  margin:0;
+  background: #FFF;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.main {
+}
+
+
+.Upload {
+  width: 100%;
+  text-align: center;
+}
+
+
+.ImageUpload--bg {
+  display: inline-block;
+  width:700px;
+  height:130px;
+  border: 1px dashed #d6d4d4;
+  margin: 70px 20px;
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  border-radius:10px;
+}
+
+.ImageUpload--browse {
+  width:50%;
+  border-right: 1px dashed #d6d4d4;
+  display: table;
+  padding:17px 0px;
+  float: left;
+}
+
+.ImageUpload--browse h2 {
+  font-size:26px;
+  text-transform: uppercase;
+  color: #626262;
+  margin:7px;
+}
+
+.ImageUpload--browse p {
+  color: #626262;
+  margin:7px;
+  font-size:14px;
+}
+
+.ImageUpload--facebook
+{
+  display: inline;
+  margin-top:30px;
+}
+
+.ImageUpload--facebook img {
+  margin-top:39px;
+}
