@@ -1,0 +1,152 @@
+.avatar-view {
+
+}
+
+.avatar-crop-container{
+  border: 1px dashed rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.avatar-view img {
+  width: 100%;
+}
+
+.avatar-body {
+ /* padding-right: 15px;
+  padding-left: 15px;*/
+}
+
+.avatar-upload {
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.avatar-upload label {
+  display: block;
+  float: left;
+  clear: left;
+  width: 100px;
+}
+
+.avatar-upload input {
+  display: block;
+}
+
+.avatar-alert {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.avatar-wrapper {
+  min-height: 200px;
+  width: 500px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,.25);
+  background-color: #fcfcfc;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.avatar-wrapper img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.avatar-preview {
+  float: left;
+  margin-top: 15px;
+  margin-right: 15px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.avatar-preview:hover {
+  border-color: #ccf;
+  box-shadow: 0 0 5px rgba(0,0,0,.15);
+}
+
+.avatar-preview img {
+  width: 100%;
+}
+
+.preview-lg {
+  height: 184px;
+  width: 184px;
+  margin-top: 15px;
+}
+
+.preview-md {
+  height: 100px;
+  width: 100px;
+}
+
+.preview-sm {
+  height: 50px;
+  width: 50px;
+}
+
+@media (min-width: 992px) {
+  .avatar-preview {
+    float: none;
+  }
+}
+
+.avatar-btns {
+  margin-top: 5px;
+  display: inline-block;
+  width:700px;
+  margin: 25px auto;
+}
+.avatar-left{
+  float: left;
+  .rotate-photo{
+    font-size: 14px;
+    font-weight: normal;
+    color: #7e7e7e;
+    padding: 5px;
+  }
+}
+.avatar-right{
+  float: right;
+  padding-top: 23px;
+}
+
+.avatar-btns .btn-group {
+  margin-right: 5px;
+}
+
+.loading {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000 url("../../../img/red-loading.gif") no-repeat center center;
+  opacity: .60;
+  filter: alpha(opacity=60);
+  z-index: 20140628;
+}
+.profile-flow-main-loading {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: transparent url("../../../img/red-loading.gif") no-repeat center center;
+  opacity: .60;
+  filter: alpha(opacity=60);
+  z-index: 20140628;
+}
+.photo-btn {
+  border: 1px solid #B1B1B1;
+}
+
+.btn-bottom-10{
+  margin-bottom: 1rem;
+}

@@ -37,9 +37,9 @@ a:hover, a:visited {
 .ImageUpload--bg {
   display: inline-block;
   width:700px;
-  height:130px;
+  height:110px;
   border: 1px dashed #d6d4d4;
-  margin: 70px 20px;
+  margin: 10px 20px 30px;
   -webkit-border-radius:10px;
   -moz-border-radius:10px;
   border-radius:10px;
@@ -49,7 +49,7 @@ a:hover, a:visited {
   width:50%;
   border-right: 1px dashed #d6d4d4;
   display: table;
-  padding:17px 0px;
+  padding:25px 0px;
   float: left;
 }
 
@@ -59,6 +59,7 @@ a:hover, a:visited {
   color: #626262;
   margin:7px;
 }
+
 
 .ImageUpload--browse p {
   color: #626262;
@@ -70,8 +71,34 @@ a:hover, a:visited {
 {
   display: inline;
   margin-top:30px;
+  cursor: pointer;
 }
 
 .ImageUpload--facebook img {
-  margin-top:39px;
+  margin-top:30px;
+}
+
+.avatar-input-top{
+  display: none!important;
+}
+#clickPublicUpload{
+  margin: 5px auto 0;
+  width: 200px;
+  height: 50px;
+}
+
+.preview-lg {
+  height: 184px;
+  width: 184px;
+
+}
+.avatar-main{
+  clear: both;
+
+}
+.avatar-thumb{
+  clear: both;
+  margin: 0 auto 60px;
+  height: 184px;
+  width: 184px;
 }

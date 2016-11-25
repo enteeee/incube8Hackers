@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Front Enders</title>
+    <script src="public/js/all.js"></script>
+    <link href="public/css/app.min.css" rel="stylesheet">
+
+</head>
+<body>
+<div id="status"></div>
+<div class="Upload">
+    <div class="ImageUpload--bg">
+        <div class="ImageUpload--browse">
+            <input type="button" class="photo-btn btn btn--primary" value="Upload file" id="clickPublicUpload"/>
+        </div>
+        <div class="ImageUpload--facebook" onClick="getInfo()">
+            <img src="../public/img/upload_fb_btn.png" width="210px"/>
+        </div>
+    </div>
+</div>
+    <div id="root"></div>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '225549994546618',
+                xfbml      : true,
+                version    : 'v2.8'
+            });
+
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        function statusChangeCallback(response) {
+            document.getElementById('status').innerHTML ="";
+            if (response.status === 'connected') {
+                FB.api('/me','GET',{fields:'first_name,last_name,id,picture.width(150).height(150)'},function(response) {
+
+                    var imageURL = response.picture.data.url;
+                    var imageBox = $('.avatar-wrapper img');
+
+                    var options = {
+                        aspectRatio: 1,
+                        viewMode: 1,
+                        preview: $('.avatar-preview'),
+                        dragMode: 'none',
+                        zoomable:false
+                    };
+
+                    imageBox.cropper(options);
+                    imageBox.cropper('replace', imageURL);
+                });
+            } else if (response.status === 'not_authorized') {
+                document.getElementById('status').innerHTML = 'Please log into this app.';
+            } else {
+                document.getElementById('status').innerHTML = 'Please log into Facebook.';
+            }
+        }
+
+        function login() {
+            FB.login(function(response) {
+                statusChangeCallback(response);
+            });
+        }
+
+        function getInfo() {
+            FB.getLoginStatus(function(response) {
+                if (response.status === 'connected') {
+                    FB.api('/me','GET',{fields:'first_name,last_name,id,picture.width(150).height(150)'},function(response) {
+                        $('.avatar-input').val('');
+                        var imageURL = response.picture.data.url;
+                        var imageBox = $('.avatar-wrapper img');
+
+                        var options = {
+                            aspectRatio: 1,
+                            viewMode: 1,
+                            preview: $('.avatar-preview'),
+                            dragMode: 'none',
+                            zoomable:false
+                        };
+
+                        imageBox.cropper(options);
+                        imageBox.cropper('replace', imageURL);
+                        $().cropper('rotate', 90);
+                    });
+                } else if (response.status === 'not_authorized') {
+                    login();
+                } else {
+                    login();
+                }
+            });
+
+        }
+
+    </script>
+
+    <script src="js/bundle.min.js"></script>
+
+</body>
+</html>

@@ -23,11 +23,11 @@ var rename = require('gulp-rename');
 
 
 gulp.task('clean-mainScripts', function () {
-    return gulp.src('public/js/*.js', {read: false})
+    return gulp.src('src/public/js/*.js', {read: false})
         .pipe(clean());
 });
 gulp.task('clean-sass', function () {
-    return gulp.src('public/css/*.css', {read: false})
+    return gulp.src('src/public/css/*.css', {read: false})
         .pipe(clean());
 });
 
@@ -36,10 +36,10 @@ gulp.task('clean-sass', function () {
 gulp.task('sass', ['clean-sass'], function() {
     return gulp.src('resources/assets/sass/app.scss')
         .pipe(sass())
-        .pipe(gulp.dest('public/css'))
+        .pipe(gulp.dest('src/public/css'))
         .pipe(rename({suffix: '.min'}))
         .pipe(minifycss())
-        .pipe(gulp.dest('public/css'));
+        .pipe(gulp.dest('src/public/css'));
 });
 
 
@@ -51,14 +51,15 @@ gulp.task('mainScripts', ['clean-mainScripts'], function() {
         'bower_packages/remodal/dist/remodal.min.js',
         'bower_packages/bootstrap-growl/jquery.bootstrap-growl.min.js',
         'bower_packages/cropper/dist/cropper.min.js',
+        'resources/assets/js/cropmain-public.js',
         'resources/assets/js/main.js'
         
         ])
         .pipe(concat('all.js'))
-        .pipe(gulp.dest('public/js'))
+        .pipe(gulp.dest('src/public/js'))
         .pipe(rename('all.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('public/js'));
+        .pipe(gulp.dest('src/public/js'));
 });
 
 
